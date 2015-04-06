@@ -1,0 +1,10 @@
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\bin\Debug\CaptureRSS.exe
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\bin\Debug\CaptureRSS.pdb
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.csprojResolveAssemblyReference.cache
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.Form1.resources
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.Properties.Resources.resources
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.csproj.GenerateResource.Cache
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.exe
+C:\Users\nmani\Desktop\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.pdb
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.exe
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.pdb

@@ -1,0 +1,18 @@
+﻿http://www.rte.ie/news/rss/news-headlines.xml
+RTÉ News - News Headlines
+http://feeds.bbci.co.uk/news/world/rss.xml
+BBC News - World
+http://www.dailymail.co.uk/home/index.rss
+Home | Mail Online
+http://rss.cnn.com/rss/edition_world.rss
+CNN.com - World
+http://rss.cnn.com/rss/edition_technology.rss
+CNN.com - Technology
+http://feeds.skynews.com/feeds/rss/world.xml
+World News - Breaking international news and headlines | Sky News
+http://feeds.skynews.com/feeds/rss/uk.xml
+UK News - The latest headlines from the UK | Sky News
+http://feeds.skynews.com/feeds/rss/home.xml
+The Latest News from the UK and Around the World | Sky News
+http://rss.nytimes.com/services/xml/rss/nyt/Europe.xml
+NYT > Europe

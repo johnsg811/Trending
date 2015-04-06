@@ -1,0 +1,4 @@
+http://www.codeguru.com/icom_includes/feeds/codeguru/rss-all.xml
+CodeGuru.com
+http://lifehacker.com/index.xml
+Lifehacker

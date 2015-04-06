@@ -1,0 +1,25 @@
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\bin\Debug\CaptureRSS.exe
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\bin\Debug\CaptureRSS.pdb
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\TrendingNews.csprojResolveAssemblyReference.cache
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.Properties.Resources.resources
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\TrendingNews.csproj.GenerateResource.Cache
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.exe
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\CaptureRSS.pdb
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\TrendingNews.Form1.resources
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\TrendingNews.frmAddNews.resources
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\bin\Debug\CaptureRSS.exe.config
+C:\Users\nmani\Google Drive\Projects\RSS Feed\CaptureRSS\obj\Debug\TrendingNews.Form2.resources
+H:\Trending App Devlopment\Trending News\CaptureRSS\bin\Debug\CaptureRSS.exe.config
+H:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\CaptureRSS.exe
+H:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\CaptureRSS.pdb
+F:\Trending App Devlopment\Trending News\CaptureRSS\bin\Debug\CaptureRSS.exe.config
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\CaptureRSS.exe
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\CaptureRSS.pdb
+F:\Trending App Devlopment\Trending News\CaptureRSS\bin\Debug\CaptureRSS.exe
+F:\Trending App Devlopment\Trending News\CaptureRSS\bin\Debug\CaptureRSS.pdb
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\TrendingNews.csprojResolveAssemblyReference.cache
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\TrendingNews.Form1.resources
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\TrendingNews.Form2.resources
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\TrendingNews.frmAddNews.resources
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\CaptureRSS.Properties.Resources.resources
+F:\Trending App Devlopment\Trending News\CaptureRSS\obj\Debug\TrendingNews.csproj.GenerateResource.Cache

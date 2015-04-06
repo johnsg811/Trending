@@ -8,36 +8,29 @@ using System.Windows.Forms;
 using System.Net;
 using System.Xml;
 using System.IO;
-using System.Text.RegularExpressions;
 
-namespace TrendingNews
+namespace CaptureRSS
 {
     public partial class Form1 : Form
     {
         bool m_bFromRSSButton = false;
         bool m_bFromLoadEvent = false;
-        private FeedManager FM;
-
+        private FeedManager m_oFeedManager;
+        
         public Form1()
         {
             InitializeComponent();
             tmrTrackHistory.Enabled = true;
             m_bFromLoadEvent = true;
-            FM = new FeedManager();
-            string sFeedListHTML = FM.GetFeedListAsHTML();
-            //RSSList.DocumentText = sFeedListHTML;
-            dataGridView1.DataSource = FM.GetFeedListAsDT();
-            DataGridViewColumn column = dataGridView1.Columns[0];
-            column.Width = 350;
-            dataGridView1.Columns[1].Visible = false;
-            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.MediumBlue;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Navy;
+            m_oFeedManager = new FeedManager();
+            string sFeedListHTML = m_oFeedManager.GetFeedListAsHTML();
+            RSSList.DocumentText = sFeedListHTML;
         }
-       
-       private void RSSFeed(bool Status)
-       {
+        
+        private void btnFetchRSS_Click(object sender, EventArgs e)
+        {
             //Check if already subscribed
-           if (FM.IsFeedPresent(txtURL.Text) && Status==false)
+            if (m_oFeedManager.IsFeedPresent(txtURL.Text) && sender.GetType().ToString()==typeof(Button).ToString())
             {
                 MessageBox.Show("Already Subscribed", "RSS Feed Initialization Failure");
                 return;
@@ -57,17 +50,6 @@ namespace TrendingNews
                 foreach (XmlNode RSSNode in RSSNodeList)
                 {
                     XmlNode RSSSubNode;
-                    RSSSubNode = RSSNode.SelectSingleNode("enclosure");
-                    string img = RSSSubNode != null ? RSSSubNode.OuterXml : "";
-
-                    if (img != "")
-                    {
-                        string[] words = img.Split(' ', '"');
-                        string Url, imgUrl = string.Empty;
-                        Url = words[2].ToString();
-                        sb.Append("<img src='" + Url + "'/>");
-                    }
-
                     RSSSubNode = RSSNode.SelectSingleNode("title");
                     string title = RSSSubNode != null ? RSSSubNode.InnerText : "";
 
@@ -77,42 +59,29 @@ namespace TrendingNews
                     RSSSubNode = RSSNode.SelectSingleNode("description");
                     string desc = RSSSubNode != null ? RSSSubNode.InnerText : "";
 
-
-                    RSSSubNode = RSSNode.SelectSingleNode("pubDate");
-                    string pubDate = RSSSubNode != null ? RSSSubNode.InnerText : "";
-
-                    
-
                     sb.Append("<font face='arial'><p><b><a href='");
                     sb.Append(link);
                     sb.Append("'>");
                     sb.Append(title);
                     sb.Append("</a></b><br/>");
-                    if (pubDate!="")
-                    sb.Append(pubDate);
                     sb.Append(desc);
-                                      
                     sb.Append("</p></font>");
-
-
                 }
                 m_bFromRSSButton = true;
                 RSSBrowser.DocumentText = sb.ToString();
 
                 //Add the new RSS feed
-               // if (sender.GetType().ToString() == typeof(Button).ToString())
-               // {
-                  //  FM.AddFeed(txtURL.Text, RSSDesc.InnerText);
-                   // m_bFromLoadEvent = true;
-                   // string sFeedListHTML = FM.GetFeedListAsHTML();
-                    //RSSList.DocumentText = sFeedListHTML;
-                   // dataGridView1.DataSource = FM.GetFeedListAsDT();
-
-               // }
+                if (sender.GetType().ToString() == typeof(Button).ToString())
+                {
+                    m_oFeedManager.AddFeed(txtURL.Text, RSSDesc.InnerText);
+                    m_bFromLoadEvent = true;
+                    string sFeedListHTML = m_oFeedManager.GetFeedListAsHTML();
+                    RSSList.DocumentText = sFeedListHTML;
+                }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString(), null);// "RSS Feed Initialization Failure");
+                MessageBox.Show(ex.ToString(),null);// "RSS Feed Initialization Failure");
             }
         }
 
@@ -172,49 +141,12 @@ namespace TrendingNews
             {
                 e.Cancel = true;
                 txtURL.Text = e.Url.ToString();
-               // btnFetchRSS_Click(this, new EventArgs());
+                btnFetchRSS_Click(this, new EventArgs());
             }
             else
             {
                 m_bFromLoadEvent = false;
             }
         }
-
-        private void tsFileAddNews_Click(object sender, EventArgs e)
-        {
-            frmAddNews fAddNew = new frmAddNews();
-            fAddNew.Show();
-        }
-
-        private void dataGridView1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-       
-
-        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            int rowIndex = e.RowIndex;
-            DataGridViewRow row = dataGridView1.Rows[rowIndex];
-            txtURL.Text = row.Cells[1].Value.ToString();
-            RSSFeed(true);  
-            //RSSBrowser.Navigate(row.Cells[1].Value.ToString());
-        }
-
-        private void NetBrowser_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
-        {
-
-            if ((int)e.CurrentProgress > 0)
-            {
-                toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
-                if (toolStripProgressBar1.Maximum == (int)e.MaximumProgress)
-                    toolStripProgressBar1.Value = 0;
-                toolStripProgressBar1.Value = (int)e.CurrentProgress;
-            }
-
-
-        }
     }
 }
-

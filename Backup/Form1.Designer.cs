@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace TrendingNews
+namespace CaptureRSS
 {
     partial class Form1
     {
@@ -33,35 +33,64 @@ namespace TrendingNews
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.txtURL = new System.Windows.Forms.TextBox();
+            this.btnAddRSS = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.RSSBrowser = new System.Windows.Forms.WebBrowser();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RSSList = new System.Windows.Forms.WebBrowser();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.NetBrowser = new System.Windows.Forms.WebBrowser();
             this.toolStripNavigate = new System.Windows.Forms.ToolStrip();
             this.btnBack = new System.Windows.Forms.ToolStripButton();
             this.btnForward = new System.Windows.Forms.ToolStripButton();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.tmrTrackHistory = new System.Windows.Forms.Timer(this.components);
-            this.tsMenu = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tsFileAddNews = new System.Windows.Forms.ToolStripMenuItem();
-            this.createFeedGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtURL = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.toolStripNavigate.SuspendLayout();
-            this.tsMenu.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // txtURL
+            // 
+            this.txtURL.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtURL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtURL.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtURL.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtURL.Location = new System.Drawing.Point(80, 13);
+            this.txtURL.Name = "txtURL";
+            this.txtURL.Size = new System.Drawing.Size(460, 18);
+            this.txtURL.TabIndex = 2;
+            // 
+            // btnAddRSS
+            // 
+            this.btnAddRSS.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAddRSS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddRSS.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRSS.ForeColor = System.Drawing.Color.DarkMagenta;
+            this.btnAddRSS.Location = new System.Drawing.Point(546, 11);
+            this.btnAddRSS.Name = "btnAddRSS";
+            this.btnAddRSS.Size = new System.Drawing.Size(96, 22);
+            this.btnAddRSS.TabIndex = 1;
+            this.btnAddRSS.Text = "Subscribe";
+            this.btnAddRSS.UseVisualStyleBackColor = false;
+            this.btnAddRSS.Click += new System.EventHandler(this.btnFetchRSS_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "RSS URL";
             // 
             // RSSBrowser
             // 
@@ -69,21 +98,21 @@ namespace TrendingNews
             this.RSSBrowser.Location = new System.Drawing.Point(0, 0);
             this.RSSBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.RSSBrowser.Name = "RSSBrowser";
-            this.RSSBrowser.Size = new System.Drawing.Size(720, 169);
+            this.RSSBrowser.Size = new System.Drawing.Size(710, 172);
             this.RSSBrowser.TabIndex = 1;
             this.RSSBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.RSSBrowser_Navigating);
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.splitContainer1);
-            this.groupBox2.Location = new System.Drawing.Point(0, 37);
+            this.groupBox2.Location = new System.Drawing.Point(12, 31);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox2.Size = new System.Drawing.Size(926, 530);
+            this.groupBox2.Size = new System.Drawing.Size(914, 536);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -96,30 +125,27 @@ namespace TrendingNews
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel1.Controls.Add(this.RSSList);
             this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(920, 511);
-            this.splitContainer1.SplitterDistance = 197;
+            this.splitContainer1.Size = new System.Drawing.Size(908, 517);
+            this.splitContainer1.SplitterDistance = 195;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
-            // dataGridView1
+            // RSSList
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(313, 359);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
+            this.RSSList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RSSList.Location = new System.Drawing.Point(0, 0);
+            this.RSSList.MinimumSize = new System.Drawing.Size(20, 20);
+            this.RSSList.Name = "RSSList";
+            this.RSSList.Size = new System.Drawing.Size(193, 515);
+            this.RSSList.TabIndex = 0;
+            this.RSSList.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.RSSList_Navigating);
             // 
             // splitContainer2
             // 
@@ -137,8 +163,8 @@ namespace TrendingNews
             // 
             this.splitContainer2.Panel2.Controls.Add(this.NetBrowser);
             this.splitContainer2.Panel2.Controls.Add(this.toolStripNavigate);
-            this.splitContainer2.Size = new System.Drawing.Size(722, 511);
-            this.splitContainer2.SplitterDistance = 171;
+            this.splitContainer2.Size = new System.Drawing.Size(712, 517);
+            this.splitContainer2.SplitterDistance = 174;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -148,19 +174,18 @@ namespace TrendingNews
             this.NetBrowser.Location = new System.Drawing.Point(0, 25);
             this.NetBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.NetBrowser.Name = "NetBrowser";
-            this.NetBrowser.Size = new System.Drawing.Size(720, 312);
+            this.NetBrowser.Size = new System.Drawing.Size(710, 315);
             this.NetBrowser.TabIndex = 1;
-            this.NetBrowser.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.NetBrowser_ProgressChanged);
             // 
             // toolStripNavigate
             // 
+            this.toolStripNavigate.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripNavigate.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBack,
-            this.btnForward,
-            this.toolStripProgressBar1});
+            this.btnForward});
             this.toolStripNavigate.Location = new System.Drawing.Point(0, 0);
             this.toolStripNavigate.Name = "toolStripNavigate";
-            this.toolStripNavigate.Size = new System.Drawing.Size(720, 25);
+            this.toolStripNavigate.Size = new System.Drawing.Size(710, 25);
             this.toolStripNavigate.TabIndex = 0;
             this.toolStripNavigate.Text = "toolStrip1";
             // 
@@ -184,88 +209,36 @@ namespace TrendingNews
             this.btnForward.Text = "Forward";
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
-            this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            // 
             // tmrTrackHistory
             // 
             this.tmrTrackHistory.Tick += new System.EventHandler(this.tmrTrackHistory_Tick);
-            // 
-            // tsMenu
-            // 
-            this.tsMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-            this.tsMenu.Location = new System.Drawing.Point(0, 0);
-            this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(938, 25);
-            this.tsMenu.TabIndex = 3;
-            this.tsMenu.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsFileAddNews,
-            this.createFeedGroupToolStripMenuItem});
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(54, 22);
-            this.toolStripButton1.Text = "FIle";
-            // 
-            // tsFileAddNews
-            // 
-            this.tsFileAddNews.Name = "tsFileAddNews";
-            this.tsFileAddNews.Size = new System.Drawing.Size(169, 22);
-            this.tsFileAddNews.Text = "Add news";
-            this.tsFileAddNews.Click += new System.EventHandler(this.tsFileAddNews_Click);
-            // 
-            // createFeedGroupToolStripMenuItem
-            // 
-            this.createFeedGroupToolStripMenuItem.Name = "createFeedGroupToolStripMenuItem";
-            this.createFeedGroupToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.createFeedGroupToolStripMenuItem.Text = "Create feed group";
-            // 
-            // txtURL
-            // 
-            this.txtURL.Location = new System.Drawing.Point(148, 0);
-            this.txtURL.Name = "txtURL";
-            this.txtURL.Size = new System.Drawing.Size(329, 20);
-            this.txtURL.TabIndex = 4;
-            this.txtURL.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackColor = System.Drawing.Color.DarkRed;
             this.ClientSize = new System.Drawing.Size(938, 579);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAddRSS);
             this.Controls.Add(this.txtURL);
-            this.Controls.Add(this.tsMenu);
             this.Controls.Add(this.groupBox2);
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "Tending apps for news reading";
+            this.Text = "Read For Speed";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             this.splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.toolStripNavigate.ResumeLayout(false);
             this.toolStripNavigate.PerformLayout();
-            this.tsMenu.ResumeLayout(false);
-            this.tsMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +246,9 @@ namespace TrendingNews
 
         #endregion
 
+        private System.Windows.Forms.TextBox txtURL;
+        private System.Windows.Forms.Button btnAddRSS;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.WebBrowser RSSBrowser;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.SplitContainer splitContainer1;
@@ -282,13 +258,7 @@ namespace TrendingNews
         private System.Windows.Forms.ToolStripButton btnForward;
         private System.Windows.Forms.WebBrowser NetBrowser;
         private System.Windows.Forms.Timer tmrTrackHistory;
-        private System.Windows.Forms.ToolStrip tsMenu;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripButton1;
-        private System.Windows.Forms.ToolStripMenuItem tsFileAddNews;
-        private System.Windows.Forms.ToolStripMenuItem createFeedGroupToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtURL;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.WebBrowser RSSList;
     }
 }
 
