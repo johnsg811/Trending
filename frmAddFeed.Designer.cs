@@ -1,4 +1,4 @@
-﻿namespace TrendingNews
+﻿namespace Trending
 {
     partial class frmAddNews
     {

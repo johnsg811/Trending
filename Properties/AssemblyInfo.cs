@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CaptureRSS")]
+[assembly: AssemblyTitle("Trending")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CaptureRSS")]
-[assembly: AssemblyCopyright("Copyright ©  2008")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("Trending")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f8b85d67-e374-4ae1-8c7c-85fba57b3c8a")]
+[assembly: Guid("ac20f844-c60d-42cf-95d2-dc440950f631")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,8 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
+// You can specify all the values or you can default the Build and Revision Numbers 
+// by using the '*' as shown below:
+// [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]

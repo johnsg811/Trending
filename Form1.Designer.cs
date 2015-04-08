@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace TrendingNews
+namespace Trending
 {
     partial class Form1
     {
@@ -42,13 +42,13 @@ namespace TrendingNews
             this.toolStripNavigate = new System.Windows.Forms.ToolStrip();
             this.btnBack = new System.Windows.Forms.ToolStripButton();
             this.btnForward = new System.Windows.Forms.ToolStripButton();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.tmrTrackHistory = new System.Windows.Forms.Timer(this.components);
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsFileAddNews = new System.Windows.Forms.ToolStripMenuItem();
             this.createFeedGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtURL = new System.Windows.Forms.TextBox();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -184,12 +184,6 @@ namespace TrendingNews
             this.btnForward.Text = "Forward";
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
             // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
-            this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            // 
             // tmrTrackHistory
             // 
             this.tmrTrackHistory.Tick += new System.EventHandler(this.tmrTrackHistory_Tick);
@@ -236,11 +230,17 @@ namespace TrendingNews
             this.txtURL.TabIndex = 4;
             this.txtURL.Visible = false;
             // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
+            this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(938, 579);
             this.Controls.Add(this.txtURL);
             this.Controls.Add(this.tsMenu);

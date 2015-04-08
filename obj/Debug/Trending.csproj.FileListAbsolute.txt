@@ -6,13 +6,6 @@ C:\Users\nmani\Google Drive\Projects\Trending\Trending\obj\Debug\Trending.Proper
 C:\Users\nmani\Google Drive\Projects\Trending\Trending\obj\Debug\Trending.csproj.GenerateResource.Cache
 C:\Users\nmani\Google Drive\Projects\Trending\Trending\obj\Debug\Trending.exe
 C:\Users\nmani\Google Drive\Projects\Trending\Trending\obj\Debug\Trending.pdb
-F:\Trending\Trending\obj\Debug\Trending.exe
-F:\Trending\Trending\obj\Debug\Trending.pdb
-F:\Trending\Trending\bin\Debug\Trending.exe
-F:\Trending\Trending\bin\Debug\Trending.pdb
-F:\Trending\Trending\obj\Debug\Trending.csprojResolveAssemblyReference.cache
-F:\Trending\Trending\obj\Debug\Trending.Form1.resources
-F:\Trending\Trending\obj\Debug\Trending.Properties.Resources.resources
-F:\Trending\Trending\obj\Debug\Trending.csproj.GenerateResource.Cache
-C:\Trending\obj\Debug\Trending.exe
-C:\Trending\obj\Debug\Trending.pdb
+C:\Users\nmani\Google Drive\Projects\Trending\Trending\obj\Debug\Trending.Form2.resources
+C:\Users\nmani\Google Drive\Projects\Trending\Trending\obj\Debug\Trending.frmAddNews.resources
+C:\Users\nmani\Google Drive\Projects\Trending\Trending\obj\Debug\Trending.Resource1.resources

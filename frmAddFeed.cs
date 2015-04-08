@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TrendingNews
+namespace Trending
 {
     public partial class frmAddNews : Form
     {
