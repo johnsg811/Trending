@@ -277,6 +277,26 @@ namespace Trending
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Process.Start("www.facebook.com");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Process.Start("www.dit.ie");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Process.Start("www.github.com");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Process.Start("www.twitter.com");
+        }
+
 
     }
 }
