@@ -9,6 +9,8 @@ using System.Net;
 using System.Xml;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Net.NetworkInformation;
+using System.Diagnostics;
 
 namespace Trending
 {
@@ -259,7 +261,23 @@ namespace Trending
             //MessageBox.Show("Hight of screen is  " + y + "Width of screen :" + x);
             if(!RSSButton)
             NetBrowser.Navigate("https://www.google.ie/");
+
+            timer1.Enabled = true;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            bool available = NetworkInterface.GetIsNetworkAvailable();
+            if(available == false)
+            {
+                MessageBox.Show("Internet Disconnected");
+                timer1.Stop();
+            }
+            
+
+        }
+
+
     }
 }
 

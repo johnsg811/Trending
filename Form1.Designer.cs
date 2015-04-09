@@ -49,6 +49,7 @@ namespace Trending
             this.tsFileAddNews = new System.Windows.Forms.ToolStripMenuItem();
             this.createFeedGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtURL = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -125,7 +126,7 @@ namespace Trending
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(417, 442);
+            this.dataGridView1.Size = new System.Drawing.Size(417, 361);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
             // 
@@ -247,6 +248,11 @@ namespace Trending
             this.txtURL.TabIndex = 4;
             this.txtURL.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -302,6 +308,7 @@ namespace Trending
         private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
