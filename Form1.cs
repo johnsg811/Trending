@@ -33,8 +33,7 @@ namespace Trending
             column.Width = 350;
             dataGridView1.Columns[1].Visible = false;
             this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Navy;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor =
-                Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Black;
         }
 
         private void RSSFeed(bool Status)

@@ -67,10 +67,10 @@ namespace Trending
             // 
             this.RSSBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RSSBrowser.Location = new System.Drawing.Point(0, 0);
-            this.RSSBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RSSBrowser.Margin = new System.Windows.Forms.Padding(4);
             this.RSSBrowser.MinimumSize = new System.Drawing.Size(27, 25);
             this.RSSBrowser.Name = "RSSBrowser";
-            this.RSSBrowser.Size = new System.Drawing.Size(962, 208);
+            this.RSSBrowser.Size = new System.Drawing.Size(960, 208);
             this.RSSBrowser.TabIndex = 1;
             this.RSSBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.RSSBrowser_Navigating);
             // 
@@ -82,9 +82,9 @@ namespace Trending
             this.groupBox2.AutoSize = true;
             this.groupBox2.Controls.Add(this.splitContainer1);
             this.groupBox2.Location = new System.Drawing.Point(0, 46);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox2.Size = new System.Drawing.Size(1235, 652);
             this.groupBox2.TabIndex = 2;
@@ -95,11 +95,12 @@ namespace Trending
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(4, 19);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Orange;
             this.splitContainer1.Panel1.Controls.Add(this.dataGridView1);
             this.splitContainer1.Panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             // 
@@ -108,7 +109,7 @@ namespace Trending
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.splitContainer1.Size = new System.Drawing.Size(1227, 629);
-            this.splitContainer1.SplitterDistance = 262;
+            this.splitContainer1.SplitterDistance = 264;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -117,7 +118,7 @@ namespace Trending
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(-1, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -131,7 +132,7 @@ namespace Trending
             this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -143,7 +144,7 @@ namespace Trending
             // 
             this.splitContainer2.Panel2.Controls.Add(this.NetBrowser);
             this.splitContainer2.Panel2.Controls.Add(this.toolStripNavigate);
-            this.splitContainer2.Size = new System.Drawing.Size(964, 629);
+            this.splitContainer2.Size = new System.Drawing.Size(962, 629);
             this.splitContainer2.SplitterDistance = 210;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
@@ -152,10 +153,10 @@ namespace Trending
             // 
             this.NetBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NetBrowser.Location = new System.Drawing.Point(0, 30);
-            this.NetBrowser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NetBrowser.Margin = new System.Windows.Forms.Padding(4);
             this.NetBrowser.MinimumSize = new System.Drawing.Size(27, 25);
             this.NetBrowser.Name = "NetBrowser";
-            this.NetBrowser.Size = new System.Drawing.Size(962, 386);
+            this.NetBrowser.Size = new System.Drawing.Size(960, 386);
             this.NetBrowser.TabIndex = 1;
             this.NetBrowser.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.NetBrowser_ProgressChanged);
             // 
@@ -167,7 +168,7 @@ namespace Trending
             this.toolStripProgressBar1});
             this.toolStripNavigate.Location = new System.Drawing.Point(0, 0);
             this.toolStripNavigate.Name = "toolStripNavigate";
-            this.toolStripNavigate.Size = new System.Drawing.Size(962, 30);
+            this.toolStripNavigate.Size = new System.Drawing.Size(960, 30);
             this.toolStripNavigate.TabIndex = 0;
             this.toolStripNavigate.Text = "toolStrip1";
             // 
@@ -219,8 +220,8 @@ namespace Trending
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(54, 22);
-            this.toolStripButton1.Text = "FIle";
+            this.toolStripButton1.Size = new System.Drawing.Size(135, 22);
+            this.toolStripButton1.Text = "Add News Website";
             // 
             // tsFileAddNews
             // 
@@ -238,7 +239,7 @@ namespace Trending
             // txtURL
             // 
             this.txtURL.Location = new System.Drawing.Point(197, 0);
-            this.txtURL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtURL.Margin = new System.Windows.Forms.Padding(4);
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(437, 22);
             this.txtURL.TabIndex = 4;
@@ -255,7 +256,7 @@ namespace Trending
             this.Controls.Add(this.groupBox2);
             this.ForeColor = System.Drawing.Color.Gainsboro;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Tending";
