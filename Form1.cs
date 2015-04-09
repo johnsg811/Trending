@@ -32,15 +32,15 @@ namespace Trending
             DataGridViewColumn column = dataGridView1.Columns[0];
             column.Width = 350;
             dataGridView1.Columns[1].Visible = false;
-            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.MediumVioletRed;
+            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Navy;
             this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor =
-                Color.Orange;
+                Color.Black;
         }
-       
-       private void RSSFeed(bool Status)
-       {
+
+        private void RSSFeed(bool Status)
+        {
             //Check if already subscribed
-           if (TRW.IsFeedPresent(txtURL.Text) && Status == false)
+            if (TRW.IsFeedPresent(txtURL.Text) && Status == false)
             {
                 MessageBox.Show("Already Subscribed", "RSS Feed Initialization Failure");
                 return;
@@ -66,38 +66,64 @@ namespace Trending
                     RSSSubNode = RSSNode.SelectSingleNode("enclosure");
                     string img = RSSSubNode != null ? RSSSubNode.OuterXml : "";
 
-                    if (img != "")
-                    {
-                        string[] words = img.Split(' ', '"');
-                        string Url, imgUrl = string.Empty;
-                        Url = words[2].ToString();
-                        sb.Append("<table><tr><td>" + title + "</td><td><img src='" + Url + "'/></td></tr>");
-                        //sb.Append("<img src='" + Url + "'/>");
-                    }
-
-                    
-
                     RSSSubNode = RSSNode.SelectSingleNode("link");
                     string link = RSSSubNode != null ? RSSSubNode.InnerText : "";
 
                     RSSSubNode = RSSNode.SelectSingleNode("description");
                     string desc = RSSSubNode != null ? RSSSubNode.InnerText : "";
 
-
                     RSSSubNode = RSSNode.SelectSingleNode("pubDate");
                     string pubDate = RSSSubNode != null ? RSSSubNode.InnerText : "";
 
-                    sb.Append("<tr><td><font face='arial'><b><a href='" + link + "'></font></td><td>" + desc + "</td></tr></table>");
+                    if (img != "")
+                    {
+                        string[] words = img.Split(' ', '"');
+                        string Url, imgUrl = string.Empty;
+                        Url = words[2].ToString();
+                        //sb.Append("<table><tr><td>" + title + "</td><td><img src='" + Url + "'/></td></tr>");
+                        //sb.Append("<font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/>");
+                        sb.Append("<table><td><img src='" + Url + "'/></td><td><font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/><p>" + desc + "</p></td><br/></table>");
+                        if (pubDate != "")
+                        {
+                            sb.Append(pubDate + "<br/><br/>");
+                        }
+                        sb.Append("<hr>");
+                        //sb.Append("<p>" + desc + "</p>");
+                    }
+                    else
+                    {
+                        sb.Append("<font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/>");
+                        sb.Append(desc + "<br/>");
+                        if (pubDate != "")
+                        {
+                            sb.Append(pubDate + "<br/><br/>");
+                        }
+                        sb.Append("<hr>");
+                    }
+
+
+
+                    //RSSSubNode = RSSNode.SelectSingleNode("link");
+                    //string link = RSSSubNode != null ? RSSSubNode.InnerText : "";
+
+                    //RSSSubNode = RSSNode.SelectSingleNode("description");
+                    //string desc = RSSSubNode != null ? RSSSubNode.InnerText : "";
+
+
+                    //RSSSubNode = RSSNode.SelectSingleNode("pubDate");
+                    //string pubDate = RSSSubNode != null ? RSSSubNode.InnerText : "";
+
+                    //sb.Append("<tr><td><font face='arial'><b><a href='" + link + "'></font></td><td>" + desc + "</td></tr></table>");
 
                     //sb.Append("<font face='arial'><p><b><a href='");
                     //sb.Append(link);
                     //sb.Append("'>");
                     //sb.Append(title);
                     //sb.Append("</a></b><br/>");
-                    //if (pubDate!="")
-                    //sb.Append(pubDate);
+                    //if (pubDate != "")
+                    //  sb.Append(pubDate + "<br/><br/>");
                     //sb.Append(desc);
-                                      
+
                     //sb.Append("</p></font>");
 
 
@@ -106,15 +132,15 @@ namespace Trending
                 RSSBrowser.DocumentText = sb.ToString();
 
                 //Add the new RSS feed
-               // if (sender.GetType().ToString() == typeof(Button).ToString())
-               // {
-                  //  FM.AddFeed(txtURL.Text, RSSDesc.InnerText);
-                   // m_bFromLoadEvent = true;
-                   // string sFeedListHTML = FM.GetFeedListAsHTML();
-                    //RSSList.DocumentText = sFeedListHTML;
-                   // dataGridView1.DataSource = FM.GetFeedListAsDT();
+                // if (sender.GetType().ToString() == typeof(Button).ToString())
+                // {
+                //  FM.AddFeed(txtURL.Text, RSSDesc.InnerText);
+                // m_bFromLoadEvent = true;
+                // string sFeedListHTML = FM.GetFeedListAsHTML();
+                //RSSList.DocumentText = sFeedListHTML;
+                // dataGridView1.DataSource = FM.GetFeedListAsDT();
 
-               // }
+                // }
             }
             catch (Exception ex)
             {
@@ -178,7 +204,7 @@ namespace Trending
             {
                 e.Cancel = true;
                 txtURL.Text = e.Url.ToString();
-               // btnFetchRSS_Click(this, new EventArgs());
+                // btnFetchRSS_Click(this, new EventArgs());
             }
             else
             {
@@ -194,17 +220,17 @@ namespace Trending
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-       
+
 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             int rowIndex = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[rowIndex];
             txtURL.Text = row.Cells[1].Value.ToString();
-            RSSFeed(true);  
+            RSSFeed(true);
             //RSSBrowser.Navigate(row.Cells[1].Value.ToString());
         }
 
