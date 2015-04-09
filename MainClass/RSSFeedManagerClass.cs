@@ -6,7 +6,7 @@ using System.Data;
 
 namespace Trending.MainClass
 {
-    public class RSSFeedManagerClass
+    public class RSSFeedManagerClass:TextReadWriteClass
     {
         private string TextFeedFilePath;
         public RSSFeedManagerClass()
@@ -14,22 +14,7 @@ namespace Trending.MainClass
             TextFeedFilePath = Resource1.TextFeedFilePath;
         }
   
-      
-        public string GetFeedListAsHTML()
-        {
-            string[] aryFeedList = GetRSSFeedList();
-            StringBuilder sb=new StringBuilder();
-            if (aryFeedList == null) return null;
-            for (int i = 0; i < aryFeedList.Length; i += 2)
-            {
-                sb.Append("<font face='arial' size='2%'><a href='");
-                sb.Append(aryFeedList[i]);
-                sb.Append("'>");
-                sb.Append(aryFeedList[i+1]);
-                sb.Append("</a><br/></font>");
-            }
-            return sb.ToString();
-        }
+            
 
         public DataTable GetFeedListAsDT()
         {

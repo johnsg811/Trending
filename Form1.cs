@@ -14,20 +14,19 @@ namespace Trending
 {
     public partial class Form1 : Form
     {
-        bool m_bFromRSSButton = false;
-        bool m_bFromLoadEvent = false;
+        bool RSSButton = false;
+        bool LoadEvent = false;
         private MainClass.RSSFeedManagerClass FM;
-        private MainClass.TextReadWriteClass TRW;
+       // private MainClass.TextReadWriteClass TRW;
 
         public Form1()
         {
             InitializeComponent();
             tmrTrackHistory.Enabled = true;
-            m_bFromLoadEvent = true;
+            LoadEvent = true;
             FM = new MainClass.RSSFeedManagerClass();
-            TRW = new MainClass.TextReadWriteClass();
-            string sFeedListHTML = FM.GetFeedListAsHTML();
-            //RSSList.DocumentText = sFeedListHTML;
+            //TRW = new MainClass.TextReadWriteClass();
+            
             dataGridView1.DataSource = FM.GetFeedListAsDT();
             DataGridViewColumn column = dataGridView1.Columns[0];
             column.Width = 350;
@@ -39,7 +38,7 @@ namespace Trending
         private void RSSFeed(bool Status)
         {
             //Check if already subscribed
-            if (TRW.IsFeedPresent(txtURL.Text) && Status == false)
+            if (FM.IsFeedPresent(txtURL.Text) && Status == false)
             {
                 MessageBox.Show("Already Subscribed", "RSS Feed Initialization Failure");
                 return;
@@ -55,6 +54,7 @@ namespace Trending
                 XmlNode RSSDesc = RSSXml.SelectSingleNode("rss/channel/title");
 
                 StringBuilder sb = new StringBuilder();
+                int x = 150, y = 180;
 
                 foreach (XmlNode RSSNode in RSSNodeList)
                 {
@@ -74,6 +74,7 @@ namespace Trending
                     RSSSubNode = RSSNode.SelectSingleNode("pubDate");
                     string pubDate = RSSSubNode != null ? RSSSubNode.InnerText : "";
 
+
                     if (img != "")
                     {
                         string[] words = img.Split(' ', '"');
@@ -81,7 +82,8 @@ namespace Trending
                         Url = words[2].ToString();
                         //sb.Append("<table><tr><td>" + title + "</td><td><img src='" + Url + "'/></td></tr>");
                         //sb.Append("<font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/>");
-                        sb.Append("<table><td><img src='" + Url + "'/></td><td><font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/><p>" + desc + "</p></td><br/></table>");
+                       // sb.Append("<table><td><img src='" + Url + "' height="+ x+" width="+y+" /></td><td><font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/><p>" + desc + "</p></td><br/></table>");
+                        sb.Append("<table><td><img src='" + Url + "' /></td><td><font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/><p>" + desc + "</p></td><br/></table>");
                         if (pubDate != "")
                         {
                             sb.Append(pubDate + "<br/><br/>");
@@ -127,7 +129,7 @@ namespace Trending
 
 
                 }
-                m_bFromRSSButton = true;
+                RSSButton = true;
                 RSSBrowser.DocumentText = sb.ToString();
 
                 //Add the new RSS feed
@@ -149,14 +151,14 @@ namespace Trending
 
         private void RSSBrowser_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
-            if (!m_bFromRSSButton)
+            if (!RSSButton)
             {
                 e.Cancel = true;
                 NetBrowser.Navigate(e.Url);
             }
             else
             {
-                m_bFromRSSButton = false;
+                RSSButton = false;
             }
         }
 
@@ -199,7 +201,7 @@ namespace Trending
 
         private void RSSList_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
-            if (!m_bFromLoadEvent)
+            if (!LoadEvent)
             {
                 e.Cancel = true;
                 txtURL.Text = e.Url.ToString();
@@ -207,7 +209,7 @@ namespace Trending
             }
             else
             {
-                m_bFromLoadEvent = false;
+                LoadEvent = false;
             }
         }
 
@@ -235,16 +237,28 @@ namespace Trending
 
         private void NetBrowser_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
+           
+                //if ((int)e.CurrentProgress > 0)
+                //{
+                //    toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
+                //    if (toolStripProgressBar1.Maximum == (int)e.MaximumProgress)
+                //        toolStripProgressBar1.Value = 0;
+                //    toolStripProgressBar1.Value = (int)e.CurrentProgress;
+                //}
+           
 
-            if ((int)e.CurrentProgress > 0)
-            {
-                toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
-                if (toolStripProgressBar1.Maximum == (int)e.MaximumProgress)
-                    toolStripProgressBar1.Value = 0;
-                toolStripProgressBar1.Value = (int)e.CurrentProgress;
-            }
 
+        }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            int x,y;
+            x = Screen.PrimaryScreen.Bounds.Width;
+            y = Screen.PrimaryScreen.Bounds.Height;
+
+            //MessageBox.Show("Hight of screen is  " + y + "Width of screen :" + x);
+            if(!RSSButton)
+            NetBrowser.Navigate("https://www.google.ie/");
         }
     }
 }
