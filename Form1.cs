@@ -56,7 +56,7 @@ namespace Trending
                 XmlNode RSSDesc = RSSXml.SelectSingleNode("rss/channel/title");
 
                 StringBuilder sb = new StringBuilder();
-                int x = 150, y = 180;
+                int x = 125, y = 160;
 
                 foreach (XmlNode RSSNode in RSSNodeList)
                 {
@@ -85,7 +85,7 @@ namespace Trending
                         //sb.Append("<table><tr><td>" + title + "</td><td><img src='" + Url + "'/></td></tr>");
                         //sb.Append("<font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/>");
                        // sb.Append("<table><td><img src='" + Url + "' height="+ x+" width="+y+" /></td><td><font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/><p>" + desc + "</p></td><br/></table>");
-                        sb.Append("<table><td><img src='" + Url + "' /></td><td><font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/><p>" + desc + "</p></td><br/></table>");
+                        sb.Append("<table><td><img src='" + Url + "' height=" + x + " width=" + y + " /></td><td><font face='arial'><b><a href='" + link + "'>" + title + "</a></b><br/><p>" + desc + "</p></td><br/></table>");
                         if (pubDate != "")
                         {
                             sb.Append(pubDate + "<br/><br/>");
@@ -221,7 +221,7 @@ namespace Trending
             fAddNew.Show();
         }
 
-        private void dataGridView1_Click(object sender, EventArgs e)
+        private void dataGridView1_CellMouseUp(object sender, EventArgs e)
         {
 
         }
