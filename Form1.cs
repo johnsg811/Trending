@@ -279,12 +279,12 @@ namespace Trending
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Process.Start("www.facebook.com");
+            Process.Start("https://www.facebook.com/johns.george.5");
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Process.Start("www.dit.ie");
+            Process.Start("https://twitter.com/johnsg811");
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
