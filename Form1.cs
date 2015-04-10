@@ -297,6 +297,19 @@ namespace Trending
             Process.Start("www.twitter.com");
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                if (!row.IsNewRow)
+                {
+                    dataGridView1.Rows.Remove(row);
+                }
+                MessageBox.Show("Selected Website Removed");
+            }
+        }
+
+
 
     }
 }
