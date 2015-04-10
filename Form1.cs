@@ -284,7 +284,7 @@ namespace Trending
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            Process.Start("https://twitter.com/johnsg811");
+            Process.Start("www.dit.ie");
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -294,7 +294,7 @@ namespace Trending
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Process.Start("www.twitter.com");
+            Process.Start("https://twitter.com/johnsg811");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -308,6 +308,12 @@ namespace Trending
                 MessageBox.Show("Selected Website Removed");
             }
         }
+
+        private void userGuildlineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("1. Add new websites == File -> Add New -> Provide RSS url for that site" + "\n" + "2. Select the webstie provided to read the news in short version" + "\n" + "3. Click on the particular new link to read the fulll news below", "User Guildline");
+        }
+
 
 
     }
