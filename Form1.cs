@@ -33,7 +33,7 @@ namespace Trending
             DataGridViewColumn column = dataGridView1.Columns[0];
             column.Width = 350;
             dataGridView1.Columns[1].Visible = false;
-            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Navy;
+            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Purple;
             this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Black;
         }
 
@@ -56,7 +56,7 @@ namespace Trending
                 XmlNode RSSDesc = RSSXml.SelectSingleNode("rss/channel/title");
 
                 StringBuilder sb = new StringBuilder();
-                int x = 125, y = 160;
+                int x = 115, y = 150;
 
                 foreach (XmlNode RSSNode in RSSNodeList)
                 {
@@ -308,7 +308,6 @@ namespace Trending
                 MessageBox.Show("Selected Website Removed");
             }
         }
-
 
 
     }
