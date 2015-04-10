@@ -53,9 +53,9 @@ namespace Trending
             this.toolStripButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.tsFileAddNews = new System.Windows.Forms.ToolStripMenuItem();
             this.createFeedGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userGuildlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.txtURL = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.userGuildlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -129,7 +129,7 @@ namespace Trending
             // 
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
             this.btnDelete.Location = new System.Drawing.Point(62, 301);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(56, 19);
             this.btnDelete.TabIndex = 5;
@@ -141,7 +141,7 @@ namespace Trending
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(109, 429);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(77, 70);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -153,7 +153,7 @@ namespace Trending
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(5, 429);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(77, 70);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,7 +165,7 @@ namespace Trending
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(109, 342);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(77, 70);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -177,7 +177,7 @@ namespace Trending
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(5, 342);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -308,6 +308,13 @@ namespace Trending
             this.createFeedGroupToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.createFeedGroupToolStripMenuItem.Text = "Create feed group";
             // 
+            // userGuildlineToolStripMenuItem
+            // 
+            this.userGuildlineToolStripMenuItem.Name = "userGuildlineToolStripMenuItem";
+            this.userGuildlineToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.userGuildlineToolStripMenuItem.Text = "User Guildline";
+            this.userGuildlineToolStripMenuItem.Click += new System.EventHandler(this.userGuildlineToolStripMenuItem_Click);
+            // 
             // txtURL
             // 
             this.txtURL.Location = new System.Drawing.Point(148, 0);
@@ -320,13 +327,6 @@ namespace Trending
             // 
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // userGuildlineToolStripMenuItem
-            // 
-            this.userGuildlineToolStripMenuItem.Name = "userGuildlineToolStripMenuItem";
-            this.userGuildlineToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
-            this.userGuildlineToolStripMenuItem.Text = "User Guildline";
-            this.userGuildlineToolStripMenuItem.Click += new System.EventHandler(this.userGuildlineToolStripMenuItem_Click);
             // 
             // Form1
             // 

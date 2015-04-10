@@ -56,7 +56,7 @@ namespace Trending
                 XmlNode RSSDesc = RSSXml.SelectSingleNode("rss/channel/title");
 
                 StringBuilder sb = new StringBuilder();
-                int x = 115, y = 150;
+                int x = 105, y = 140;
 
                 foreach (XmlNode RSSNode in RSSNodeList)
                 {
@@ -289,7 +289,7 @@ namespace Trending
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            Process.Start("www.github.com");
+            Process.Start("https://github.com/johnsg811");
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
