@@ -15,5 +15,15 @@ namespace Trending
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmHelp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
