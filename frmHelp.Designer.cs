@@ -54,7 +54,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 88);
+            this.textBox1.Location = new System.Drawing.Point(127, 92);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(322, 20);
             this.textBox1.TabIndex = 2;
@@ -70,11 +70,11 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 173);
+            this.textBox3.Location = new System.Drawing.Point(167, 155);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(322, 20);
+            this.textBox3.Size = new System.Drawing.Size(282, 20);
             this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "User can add news websites by giving url of rss in ADD FEED";
+            this.textBox3.Text = "Press the REFRESH button on the top to view the website";
             // 
             // frmHelp
             // 
