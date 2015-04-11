@@ -6,8 +6,20 @@ using System.Data;
 
 namespace Trending.MainClass
 {
+
+    public static class GetSet
+    {
+        public static string _RssFeedLink;
+
+        public static string RssFeedLink
+        {
+            get { return _RssFeedLink; }
+            set { _RssFeedLink = value; }
+        }
+    }
     public class RSSFeedManagerClass:TextReadWriteClass
     {
+       
         private string TextFeedFilePath;
         public RSSFeedManagerClass()
         {
@@ -27,8 +39,9 @@ namespace Trending.MainClass
             for (int i = 0; i < aryFeedList.Length; i += 2)
             {
                     DataRow dr = dt.NewRow();
-                    dr["Title"] = aryFeedList[i+1];
                     dr["Link"] = aryFeedList[i];
+                    if (!string.IsNullOrEmpty(aryFeedList[i + 1]))
+                    dr["Title"] = aryFeedList[i+1];
                     dt.Rows.Add(dr);
             }
             return dt;

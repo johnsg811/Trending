@@ -8,20 +8,20 @@ namespace Trending.MainClass
 {
    public class TextReadWriteClass
     {
-       private  string TextFeedFilePath;
+       private  string FeedFilePath;
         public TextReadWriteClass()
         {
-            TextFeedFilePath = Resource1.TextFeedFilePath;
-            if (!File.Exists(TextFeedFilePath))
+            FeedFilePath = Resource1.TextFeedFilePath;
+            if (!File.Exists(FeedFilePath))
             {
-                StreamWriter temp = File.CreateText(TextFeedFilePath);
+                StreamWriter temp = File.CreateText(FeedFilePath);
                 temp.Close();  
             }                      
         }
 
         public void AddFeed(string TextFeedFilePath, string RSSFeedDesc)
         {
-            StreamWriter tw = File.AppendText(TextFeedFilePath);
+            StreamWriter tw = File.AppendText(FeedFilePath);
             tw.WriteLine(TextFeedFilePath);
             tw.WriteLine(RSSFeedDesc);
             tw.Close();
@@ -29,11 +29,11 @@ namespace Trending.MainClass
 
         public bool IsFeedPresent(string RSSFeedPath)
         {
-            TextReader TR = new StreamReader(TextFeedFilePath);
+            TextReader TR = new StreamReader(FeedFilePath);
             string NextLine = TR.ReadLine();
             while (NextLine != null)
             {
-                if (NextLine == TextFeedFilePath)
+                if (NextLine == FeedFilePath)
                 {
                     TR.Close();
                     return true;

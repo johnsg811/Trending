@@ -14,8 +14,8 @@ C:\Trending\Trending\obj\Debug\Trending.pdb
 C:\Trending\Trending\bin\Debug\Trending.exe
 C:\Trending\Trending\bin\Debug\Trending.pdb
 C:\Trending\Trending\obj\Debug\Trending.csprojResolveAssemblyReference.cache
-C:\Trending\Trending\obj\Debug\Trending.Form1.resources
 C:\Trending\Trending\obj\Debug\Trending.frmAddNews.resources
 C:\Trending\Trending\obj\Debug\Trending.Properties.Resources.resources
 C:\Trending\Trending\obj\Debug\Trending.Resource1.resources
 C:\Trending\Trending\obj\Debug\Trending.csproj.GenerateResource.Cache
+C:\Trending\Trending\obj\Debug\Trending.frmTrending.resources

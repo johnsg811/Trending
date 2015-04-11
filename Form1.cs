@@ -14,14 +14,14 @@ using System.Diagnostics;
 
 namespace Trending
 {
-    public partial class Form1 : Form
+    public partial class frmTrending : Form
     {
         bool RSSButton = false;
         bool LoadEvent = false;
         private MainClass.RSSFeedManagerClass FM;
        // private MainClass.TextReadWriteClass TRW;
 
-        public Form1()
+        public frmTrending()
         {
             InitializeComponent();
             tmrTrackHistory.Enabled = true;
@@ -56,7 +56,7 @@ namespace Trending
                 XmlNode RSSDesc = RSSXml.SelectSingleNode("rss/channel/title");
 
                 StringBuilder sb = new StringBuilder();
-                int x = 105, y = 140;
+                int x = 95, y = 130;
 
                 foreach (XmlNode RSSNode in RSSNodeList)
                 {
