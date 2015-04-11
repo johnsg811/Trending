@@ -30,14 +30,14 @@
         {
             this.lblName = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblLecturer = new System.Windows.Forms.Label();
+            this.lblDueDate = new System.Windows.Forms.Label();
             this.txtname = new System.Windows.Forms.TextBox();
             this.lblStudent = new System.Windows.Forms.Label();
             this.txtStudent = new System.Windows.Forms.TextBox();
             this.txtProject1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtLecturer = new System.Windows.Forms.TextBox();
+            this.txtDueDate = new System.Windows.Forms.TextBox();
             this.txtProject2 = new System.Windows.Forms.TextBox();
             this.txtProject3 = new System.Windows.Forms.TextBox();
             this.txtProject4 = new System.Windows.Forms.TextBox();
@@ -62,23 +62,23 @@
             this.lblProject.TabIndex = 2;
             this.lblProject.Text = "Project";
             // 
-            // label3
+            // lblLecturer
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 262);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Lecturer";
+            this.lblLecturer.AutoSize = true;
+            this.lblLecturer.Location = new System.Drawing.Point(23, 262);
+            this.lblLecturer.Name = "lblLecturer";
+            this.lblLecturer.Size = new System.Drawing.Size(46, 13);
+            this.lblLecturer.TabIndex = 3;
+            this.lblLecturer.Text = "Lecturer";
             // 
-            // label4
+            // lblDueDate
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 303);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Due Date";
+            this.lblDueDate.AutoSize = true;
+            this.lblDueDate.Location = new System.Drawing.Point(23, 303);
+            this.lblDueDate.Name = "lblDueDate";
+            this.lblDueDate.Size = new System.Drawing.Size(53, 13);
+            this.lblDueDate.TabIndex = 4;
+            this.lblDueDate.Text = "Due Date";
             // 
             // txtname
             // 
@@ -116,23 +116,23 @@
             this.txtProject1.TabIndex = 8;
             this.txtProject1.Text = "Trending";
             // 
-            // textBox4
+            // txtLecturer
             // 
-            this.textBox4.Location = new System.Drawing.Point(138, 262);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(80, 20);
-            this.textBox4.TabIndex = 9;
-            this.textBox4.Text = "Bryan Duggan";
+            this.txtLecturer.Location = new System.Drawing.Point(138, 262);
+            this.txtLecturer.Name = "txtLecturer";
+            this.txtLecturer.ReadOnly = true;
+            this.txtLecturer.Size = new System.Drawing.Size(80, 20);
+            this.txtLecturer.TabIndex = 9;
+            this.txtLecturer.Text = "Bryan Duggan";
             // 
-            // textBox5
+            // txtDueDate
             // 
-            this.textBox5.Location = new System.Drawing.Point(138, 303);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(80, 20);
-            this.textBox5.TabIndex = 10;
-            this.textBox5.Text = "15/04/2015";
+            this.txtDueDate.Location = new System.Drawing.Point(138, 303);
+            this.txtDueDate.Name = "txtDueDate";
+            this.txtDueDate.ReadOnly = true;
+            this.txtDueDate.Size = new System.Drawing.Size(80, 20);
+            this.txtDueDate.TabIndex = 10;
+            this.txtDueDate.Text = "15/04/2015";
             // 
             // txtProject2
             // 
@@ -169,14 +169,14 @@
             this.Controls.Add(this.txtProject4);
             this.Controls.Add(this.txtProject3);
             this.Controls.Add(this.txtProject2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDueDate);
+            this.Controls.Add(this.txtLecturer);
             this.Controls.Add(this.txtProject1);
             this.Controls.Add(this.txtStudent);
             this.Controls.Add(this.lblStudent);
             this.Controls.Add(this.txtname);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblDueDate);
+            this.Controls.Add(this.lblLecturer);
             this.Controls.Add(this.lblProject);
             this.Controls.Add(this.lblName);
             this.Name = "frmAboutUs";
@@ -191,14 +191,14 @@
 
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblProject;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblLecturer;
+        private System.Windows.Forms.Label lblDueDate;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Label lblStudent;
         private System.Windows.Forms.TextBox txtStudent;
         private System.Windows.Forms.TextBox txtProject1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtLecturer;
+        private System.Windows.Forms.TextBox txtDueDate;
         private System.Windows.Forms.TextBox txtProject2;
         private System.Windows.Forms.TextBox txtProject3;
         private System.Windows.Forms.TextBox txtProject4;
