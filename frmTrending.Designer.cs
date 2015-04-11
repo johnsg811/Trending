@@ -40,7 +40,7 @@ namespace Trending
             this.btnOk = new System.Windows.Forms.Button();
             this.txtWebURL = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pbAIB = new System.Windows.Forms.PictureBox();
+            this.pbGooglePlus = new System.Windows.Forms.PictureBox();
             this.pgGmail = new System.Windows.Forms.PictureBox();
             this.pbGIHub = new System.Windows.Forms.PictureBox();
             this.pbDIT = new System.Windows.Forms.PictureBox();
@@ -68,7 +68,7 @@ namespace Trending
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAIB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGooglePlus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgGmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGIHub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDIT)).BeginInit();
@@ -166,7 +166,7 @@ namespace Trending
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.pbAIB);
+            this.groupBox1.Controls.Add(this.pbGooglePlus);
             this.groupBox1.Controls.Add(this.pgGmail);
             this.groupBox1.Controls.Add(this.pbGIHub);
             this.groupBox1.Controls.Add(this.pbDIT);
@@ -180,22 +180,22 @@ namespace Trending
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recommanded website";
             // 
-            // pbAIB
+            // pbGooglePlus
             // 
-            this.pbAIB.Image = ((System.Drawing.Image)(resources.GetObject("pbAIB.Image")));
-            this.pbAIB.Location = new System.Drawing.Point(185, 127);
-            this.pbAIB.Margin = new System.Windows.Forms.Padding(2);
-            this.pbAIB.Name = "pbAIB";
-            this.pbAIB.Size = new System.Drawing.Size(77, 70);
-            this.pbAIB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbAIB.TabIndex = 13;
-            this.pbAIB.TabStop = false;
-            this.pbAIB.Click += new System.EventHandler(this.pbAIB_Click);
+            this.pbGooglePlus.Image = ((System.Drawing.Image)(resources.GetObject("pbGooglePlus.Image")));
+            this.pbGooglePlus.Location = new System.Drawing.Point(196, 40);
+            this.pbGooglePlus.Margin = new System.Windows.Forms.Padding(2);
+            this.pbGooglePlus.Name = "pbGooglePlus";
+            this.pbGooglePlus.Size = new System.Drawing.Size(77, 70);
+            this.pbGooglePlus.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbGooglePlus.TabIndex = 13;
+            this.pbGooglePlus.TabStop = false;
+            this.pbGooglePlus.Click += new System.EventHandler(this.pbGooglePlus_Click);
             // 
             // pgGmail
             // 
             this.pgGmail.Image = ((System.Drawing.Image)(resources.GetObject("pgGmail.Image")));
-            this.pgGmail.Location = new System.Drawing.Point(185, 40);
+            this.pgGmail.Location = new System.Drawing.Point(196, 127);
             this.pgGmail.Margin = new System.Windows.Forms.Padding(2);
             this.pgGmail.Name = "pgGmail";
             this.pgGmail.Size = new System.Drawing.Size(77, 70);
@@ -434,7 +434,7 @@ namespace Trending
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAIB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGooglePlus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgGmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGIHub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDIT)).EndInit();
@@ -477,7 +477,7 @@ namespace Trending
         private System.Windows.Forms.PictureBox pbDIT;
         private System.Windows.Forms.PictureBox pbTwitter;
         private System.Windows.Forms.PictureBox pbFacebook;
-        private System.Windows.Forms.PictureBox pbAIB;
+        private System.Windows.Forms.PictureBox pbGooglePlus;
         private System.Windows.Forms.PictureBox pgGmail;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.TextBox txtWebURL;

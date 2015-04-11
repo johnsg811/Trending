@@ -266,9 +266,9 @@ namespace Trending
             NetBrowser.Navigate("https://mail.google.com/");
         }
 
-        private void pbAIB_Click(object sender, EventArgs e)
+        private void pbGooglePlus_Click(object sender, EventArgs e)
         {
-            NetBrowser.Navigate("http://personal.aib.ie/");
+            NetBrowser.Navigate("https://plus.google.com");
         }
        
 #endregion
