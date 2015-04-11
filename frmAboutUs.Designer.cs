@@ -41,6 +41,7 @@
             this.txtProject2 = new System.Windows.Forms.TextBox();
             this.txtProject3 = new System.Windows.Forms.TextBox();
             this.txtProject4 = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -161,11 +162,22 @@
             this.txtProject4.TabIndex = 13;
             this.txtProject4.Text = "Can also browse through internet";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(327, 339);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(63, 23);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmAboutUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 335);
+            this.ClientSize = new System.Drawing.Size(402, 374);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtProject4);
             this.Controls.Add(this.txtProject3);
             this.Controls.Add(this.txtProject2);
@@ -202,6 +214,7 @@
         private System.Windows.Forms.TextBox txtProject2;
         private System.Windows.Forms.TextBox txtProject3;
         private System.Windows.Forms.TextBox txtProject4;
+        private System.Windows.Forms.Button btnClose;
 
 
     }
