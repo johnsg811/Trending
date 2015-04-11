@@ -314,16 +314,15 @@ namespace Trending
             frmAboutUs fau = new frmAboutUs();
             fau.Show();
 
-
-             //MessageBox.Show("1. Add new websites == File -> Add New -> Provide RSS url for that site" + "\n" + "2. Select the webstie provided to read the news in short version" + "\n" + "3. Click on the particular new link to read the fulll news below", "User Guildline");
-        
         }
 
         private void tsHelps_Click(object sender, EventArgs e)
         {
+            frmHelp fh = new frmHelp();
+            fh.Show();
+
 
         }
-
 
 
 

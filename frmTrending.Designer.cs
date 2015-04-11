@@ -161,7 +161,7 @@ namespace Trending
             this.txtWebURL.Name = "txtWebURL";
             this.txtWebURL.Size = new System.Drawing.Size(200, 20);
             this.txtWebURL.TabIndex = 2;
-            this.txtWebURL.Text = "example : www.johnsg.net";
+            this.txtWebURL.Text = "www.johnsg.net";
             this.txtWebURL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWebURL_KeyPress);
             // 
             // groupBox1
