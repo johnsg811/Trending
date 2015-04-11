@@ -33,6 +33,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl1
@@ -76,11 +79,39 @@
             this.textBox3.TabIndex = 4;
             this.textBox3.Text = "Press the REFRESH button on the top to view the website";
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(127, 211);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(322, 20);
+            this.textBox4.TabIndex = 5;
+            this.textBox4.Text = "User can also browse through recommed website in the app";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(127, 263);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(322, 20);
+            this.textBox5.TabIndex = 6;
+            this.textBox5.Text = "You can search any URL to browse in textbox below ";
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(394, 320);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 7;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            // 
             // frmHelp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 349);
+            this.ClientSize = new System.Drawing.Size(481, 355);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -100,5 +131,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnClose;
     }
 }
