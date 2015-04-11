@@ -253,7 +253,12 @@ namespace Trending
             
         }
 
-      
+        private void pbDIT_Click(object sender, EventArgs e)
+        {
+            NetBrowser.Navigate("www.dit.ie");
+
+        }
+       
 #endregion
 
 #region Navigation user input url
