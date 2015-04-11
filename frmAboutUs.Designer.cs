@@ -1,6 +1,6 @@
 ﻿namespace Trending
 {
-    partial class AboutUs
+    partial class frmAboutUs
     {
         /// <summary>
         /// Required designer variable.
@@ -40,13 +40,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Trending news application";
             // 
-            // AboutUs
+            // frmAboutUs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 285);
             this.Controls.Add(this.label1);
-            this.Name = "AboutUs";
+            this.Name = "frmAboutUs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutUs";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -34,6 +34,7 @@ namespace Trending
             dataGridView1.Columns[1].Visible = false;
             this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Purple;
             this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Black;
+
         }
 
         private void RSSFeed(bool Status)
@@ -239,17 +240,18 @@ namespace Trending
         {
             dataGridView1.DataSource = FM.GetFeedListAsDT();
         }
+
 #region Reccomanded Web site
         private void pbFacebook_Click(object sender, EventArgs e)
         {
-            NetBrowser.Navigate("https://www.facebook.com/johns.george.5");
+            NetBrowser.Navigate("https://www.facebook.com");
         }
         
 
         
         private void pbTwitter_Click(object sender, EventArgs e)
         {
-            NetBrowser.Navigate("https://twitter.com/johnsg811");
+            NetBrowser.Navigate("https://twitter.com");
             
         }
 
@@ -257,6 +259,20 @@ namespace Trending
         {
             NetBrowser.Navigate("www.dit.ie");
 
+        }
+        private void pbGIHub_Click(object sender, EventArgs e)
+        {
+            NetBrowser.Navigate("www.github.com");
+        }
+
+        private void pgGmail_Click(object sender, EventArgs e)
+        {
+            NetBrowser.Navigate("https://mail.google.com/");
+        }
+
+        private void pbAIB_Click(object sender, EventArgs e)
+        {
+            NetBrowser.Navigate("http://personal.aib.ie/");
         }
        
 #endregion
@@ -296,6 +312,17 @@ namespace Trending
         }
 
 #endregion
+
+        private void tsAboutUs_Click(object sender, EventArgs e)
+        {
+            frmAboutUs fau = new frmAboutUs();
+            fau.Show();
+        }
+
+        private void tsHelps_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
 

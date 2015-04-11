@@ -391,6 +391,7 @@ namespace Trending
             this.tsAboutUs.Name = "tsAboutUs";
             this.tsAboutUs.Size = new System.Drawing.Size(78, 22);
             this.tsAboutUs.Text = "About Us";
+            this.tsAboutUs.Click += new System.EventHandler(this.tsAboutUs_Click);
             // 
             // tsHelps
             // 

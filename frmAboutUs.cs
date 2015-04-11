@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Trending
 {
-    public partial class AboutUs : Form
+    public partial class frmAboutUs : Form
     {
-        public AboutUs()
+        public frmAboutUs()
         {
             InitializeComponent();
         }
