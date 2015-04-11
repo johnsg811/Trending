@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Trending
 {
@@ -22,8 +23,21 @@ namespace Trending
 
         private void btnAddFeed_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Trending.MainClass.GetSet._RssFeedLink = txtRssWeblink.Text;
+            MainClass.RSSFeedManagerClass FMC = new MainClass.RSSFeedManagerClass();
+            try
+            {
+                XmlDocument RSSXml = new XmlDocument();
+                RSSXml.Load(txtRssWeblink.Text);
+                XmlNode RSSDesc = RSSXml.SelectSingleNode("rss/channel/title");
+                // Add the new RSS feed
 
+                FMC.AddFeed(txtRssWeblink.Text, RSSDesc.InnerText);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
     }
 }

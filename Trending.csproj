@@ -45,12 +45,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainClass\RSSFeedManagerClass.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="AboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainClass\RSSFeedManagerClass.cs" />
+    <Compile Include="frmTrending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrending.Designer.cs">
+      <DependentUpon>frmTrending.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddFeed.cs">
       <SubType>Form</SubType>
@@ -66,8 +78,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrending.resx">
+      <DependentUpon>frmTrending.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddFeed.resx">
       <DependentUpon>frmAddFeed.cs</DependentUpon>
