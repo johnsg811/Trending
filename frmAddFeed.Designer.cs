@@ -51,7 +51,7 @@
             // 
             // btnAddFeed
             // 
-            this.btnAddFeed.Location = new System.Drawing.Point(98, 44);
+            this.btnAddFeed.Location = new System.Drawing.Point(178, 44);
             this.btnAddFeed.Name = "btnAddFeed";
             this.btnAddFeed.Size = new System.Drawing.Size(59, 23);
             this.btnAddFeed.TabIndex = 2;

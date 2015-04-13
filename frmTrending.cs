@@ -18,7 +18,7 @@ namespace Trending
     {
         bool RSSButton = false;
         bool LoadEvent = false;
-        private MainClass.RSSFeedManagerClass FM;
+        private MainClass.RSSFeedManagerClass RFMC;
        // private MainClass.TextReadWriteClass TRW;
 
         public frmTrending()
@@ -26,9 +26,9 @@ namespace Trending
             InitializeComponent();
             tmrTrackHistory.Enabled = true;
             LoadEvent = true;
-            FM = new MainClass.RSSFeedManagerClass();
+            RFMC = new MainClass.RSSFeedManagerClass();
                    
-            dataGridView1.DataSource = FM.GetFeedListAsDT();
+            dataGridView1.DataSource = RFMC.GetFeedListAsDT();
             DataGridViewColumn column = dataGridView1.Columns[0];
             column.Width = 350;
             dataGridView1.Columns[1].Visible = false;
@@ -40,7 +40,7 @@ namespace Trending
         private void RSSFeed(bool Status)
         {
             //Check if already subscribed
-            if (FM.IsFeedPresent(txtURL.Text) && Status == false)
+            if (RFMC.IsFeedPresent(txtURL.Text) && Status == false)
             {
                 MessageBox.Show("Already Subscribed", "RSS Feed Initialization Failure");
                 return;
@@ -220,8 +220,9 @@ namespace Trending
             y = Screen.PrimaryScreen.Bounds.Height;
 
             //MessageBox.Show("Hight of screen is  " + y + "Width of screen :" + x);
-            if (!string.IsNullOrEmpty(Trending.MainClass.GetSet._RssFeedLink))
+            /*if (!string.IsNullOrEmpty(Trending.MainClass.GetSet._RssFeedLink))
                 txtURL.Text = Trending.MainClass.GetSet._RssFeedLink;
+              */
              bool available = NetworkInterface.GetIsNetworkAvailable();
             if(available == false)
                 MessageBox.Show("It seems internet is not working");
@@ -232,9 +233,9 @@ namespace Trending
         #endregion
 
         //Refresh : after adding new RSS feed
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void tsRefresh_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = FM.GetFeedListAsDT();
+            dataGridView1.DataSource = RFMC.GetFeedListAsDT();
         }
 
 #region Reccomanded Web site
@@ -297,7 +298,7 @@ namespace Trending
 
         private void txtWebURL_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Convert.ToInt32(e.KeyChar) == 13)
+            if (Convert.ToInt32(e.KeyChar) == 13)//  press enter key -- it open the particular web site 
                 URLNavigaion();
         }
 
@@ -324,6 +325,7 @@ namespace Trending
 
         }
 
+   
 
 
 

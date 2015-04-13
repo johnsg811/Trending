@@ -23,7 +23,7 @@ namespace Trending
 
         private void btnAddFeed_Click(object sender, EventArgs e)
         {
-            Trending.MainClass.GetSet._RssFeedLink = txtRssWeblink.Text;
+           // Trending.MainClass.GetSet._RssFeedLink = txtRssWeblink.Text;
             MainClass.RSSFeedManagerClass FMC = new MainClass.RSSFeedManagerClass();
             try
             {

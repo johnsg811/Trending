@@ -89,7 +89,7 @@ namespace Trending
             this.RSSBrowser.Location = new System.Drawing.Point(0, 0);
             this.RSSBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.RSSBrowser.Name = "RSSBrowser";
-            this.RSSBrowser.Size = new System.Drawing.Size(1047, 219);
+            this.RSSBrowser.Size = new System.Drawing.Size(986, 205);
             this.RSSBrowser.TabIndex = 1;
             this.RSSBrowser.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.RSSBrowser_Navigating);
             // 
@@ -103,7 +103,7 @@ namespace Trending
             this.groupBox2.Location = new System.Drawing.Point(0, 37);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox2.Size = new System.Drawing.Size(1342, 684);
+            this.groupBox2.Size = new System.Drawing.Size(1264, 644);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
@@ -128,8 +128,8 @@ namespace Trending
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.splitContainer1.Size = new System.Drawing.Size(1336, 665);
-            this.splitContainer1.SplitterDistance = 286;
+            this.splitContainer1.Size = new System.Drawing.Size(1258, 625);
+            this.splitContainer1.SplitterDistance = 269;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -283,8 +283,8 @@ namespace Trending
             // 
             this.splitContainer2.Panel2.Controls.Add(this.NetBrowser);
             this.splitContainer2.Panel2.Controls.Add(this.toolStripNavigate);
-            this.splitContainer2.Size = new System.Drawing.Size(1049, 665);
-            this.splitContainer2.SplitterDistance = 221;
+            this.splitContainer2.Size = new System.Drawing.Size(988, 625);
+            this.splitContainer2.SplitterDistance = 207;
             this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
@@ -294,7 +294,7 @@ namespace Trending
             this.NetBrowser.Location = new System.Drawing.Point(0, 25);
             this.NetBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.NetBrowser.Name = "NetBrowser";
-            this.NetBrowser.Size = new System.Drawing.Size(1047, 416);
+            this.NetBrowser.Size = new System.Drawing.Size(986, 390);
             this.NetBrowser.TabIndex = 1;
             this.NetBrowser.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.NetBrowser_ProgressChanged);
             // 
@@ -306,7 +306,7 @@ namespace Trending
             this.toolStripProgressBar1});
             this.toolStripNavigate.Location = new System.Drawing.Point(0, 0);
             this.toolStripNavigate.Name = "toolStripNavigate";
-            this.toolStripNavigate.Size = new System.Drawing.Size(1047, 25);
+            this.toolStripNavigate.Size = new System.Drawing.Size(986, 25);
             this.toolStripNavigate.TabIndex = 0;
             this.toolStripNavigate.Text = "toolStrip1";
             // 
@@ -349,7 +349,7 @@ namespace Trending
             this.tsHelps});
             this.tsMenu.Location = new System.Drawing.Point(0, 0);
             this.tsMenu.Name = "tsMenu";
-            this.tsMenu.Size = new System.Drawing.Size(1354, 25);
+            this.tsMenu.Size = new System.Drawing.Size(1276, 25);
             this.tsMenu.TabIndex = 3;
             this.tsMenu.Text = "toolStrip1";
             // 
@@ -380,7 +380,7 @@ namespace Trending
             this.tsRefresh.Name = "tsRefresh";
             this.tsRefresh.Size = new System.Drawing.Size(71, 22);
             this.tsRefresh.Text = "Refresh";
-            this.tsRefresh.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.tsRefresh.Click += new System.EventHandler(this.tsRefresh_Click);
             // 
             // tsAboutUs
             // 
@@ -402,6 +402,7 @@ namespace Trending
             this.tsHelps.Name = "tsHelps";
             this.tsHelps.Size = new System.Drawing.Size(58, 22);
             this.tsHelps.Text = "Helps";
+            this.tsHelps.Click += new System.EventHandler(this.tsHelps_Click);
             // 
             // txtURL
             // 
@@ -416,7 +417,7 @@ namespace Trending
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.ClientSize = new System.Drawing.Size(1276, 693);
             this.Controls.Add(this.txtURL);
             this.Controls.Add(this.tsMenu);
             this.Controls.Add(this.groupBox2);

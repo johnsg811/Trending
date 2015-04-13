@@ -6,17 +6,19 @@ using System.Data;
 
 namespace Trending.MainClass
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    //public static class GetSet
+    //{
+    //    public static string _RssFeedLink;
 
-    public static class GetSet
-    {
-        public static string _RssFeedLink;
-
-        public static string RssFeedLink
-        {
-            get { return _RssFeedLink; }
-            set { _RssFeedLink = value; }
-        }
-    }
+    //    public static string RssFeedLink
+    //    {
+    //        get { return _RssFeedLink; }
+    //        set { _RssFeedLink = value; }
+    //    }
+    //}
     public class RSSFeedManagerClass:TextReadWriteClass
     {
        
@@ -25,24 +27,23 @@ namespace Trending.MainClass
         {
             TextFeedFilePath = Resource1.TextFeedFilePath;
         }
-  
-            
+
+
 
         public DataTable GetFeedListAsDT()
         {
             string[] aryFeedList = GetRSSFeedList();
-            StringBuilder sb = new StringBuilder();
-                       DataTable dt = new DataTable();
-                dt.Columns.Add("Title", typeof(string));
-                dt.Columns.Add("Link", typeof(string));
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Title", typeof(string));
+            dt.Columns.Add("Link", typeof(string));
             if (aryFeedList == null) return null;
             for (int i = 0; i < aryFeedList.Length; i += 2)
             {
-                    DataRow dr = dt.NewRow();
-                    dr["Link"] = aryFeedList[i];
-                    if (!string.IsNullOrEmpty(aryFeedList[i + 1]))
-                    dr["Title"] = aryFeedList[i+1];
-                    dt.Rows.Add(dr);
+                DataRow dr = dt.NewRow();
+                dr["Link"] = aryFeedList[i];
+                if (!string.IsNullOrEmpty(aryFeedList[i + 1]))
+                    dr["Title"] = aryFeedList[i + 1];
+                dt.Rows.Add(dr);
             }
             return dt;
         }
