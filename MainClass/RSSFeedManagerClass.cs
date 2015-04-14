@@ -19,7 +19,7 @@ namespace Trending.MainClass
     //        set { _RssFeedLink = value; }
     //    }
     //}
-    public class RSSFeedManagerClass:TextReadWriteClass
+    public class RSSFeedManagerClass:TextReadWriteClass             //inheritence
     {
        
         private string TextFeedFilePath;
