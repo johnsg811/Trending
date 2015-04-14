@@ -51,7 +51,7 @@
             // 
             // btnAddFeed
             // 
-            this.btnAddFeed.Location = new System.Drawing.Point(178, 44);
+            this.btnAddFeed.Location = new System.Drawing.Point(98, 44);
             this.btnAddFeed.Name = "btnAddFeed";
             this.btnAddFeed.Size = new System.Drawing.Size(59, 23);
             this.btnAddFeed.TabIndex = 2;
@@ -67,7 +67,10 @@
             this.Controls.Add(this.btnAddFeed);
             this.Controls.Add(this.txtRssWeblink);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAddNews";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add new news RSS feed";
             this.Load += new System.EventHandler(this.frmAddNews_Load);
             this.ResumeLayout(false);

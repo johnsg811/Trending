@@ -23,7 +23,6 @@ namespace Trending
 
         private void btnAddFeed_Click(object sender, EventArgs e)
         {
-           // Trending.MainClass.GetSet._RssFeedLink = txtRssWeblink.Text;
             MainClass.RSSFeedManagerClass FMC = new MainClass.RSSFeedManagerClass();
             try
             {
@@ -33,6 +32,11 @@ namespace Trending
                 // Add the new RSS feed
 
                 FMC.AddFeed(txtRssWeblink.Text, RSSDesc.InnerText);
+                DialogResult result = MessageBox.Show("Do you want to add more RSS feed ?", "Add more feed", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                    this.Close();
+                else
+                    txtRssWeblink.Text = "";
             }
             catch (Exception ex)
             {

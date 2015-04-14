@@ -191,6 +191,8 @@
             this.Controls.Add(this.lblLecturer);
             this.Controls.Add(this.lblProject);
             this.Controls.Add(this.lblName);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAboutUs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AboutUs";

@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>1. Select Any News Websites given on the right side to read news
+2. User can click on any news link to read the full news below
+3. User can add news websites by giving url of rss in ADD FEED
+	(i) Press the REFRESH button on the top to view the website
+4. User can also browse through recommed website in the app
+5. You can search any URL to browse in textbox below </value>
+  </data>
 </root>

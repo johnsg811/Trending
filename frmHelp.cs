@@ -30,5 +30,10 @@ namespace Trending
         {
             Close();
         }
+
+        private void txt5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

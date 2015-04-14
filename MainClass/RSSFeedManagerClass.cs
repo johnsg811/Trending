@@ -36,13 +36,12 @@ namespace Trending.MainClass
             DataTable dt = new DataTable();
             dt.Columns.Add("Title", typeof(string));
             dt.Columns.Add("Link", typeof(string));
-            if (aryFeedList == null) return null;
+            if (aryFeedList == null) return dt;
             for (int i = 0; i < aryFeedList.Length; i += 2)
             {
                 DataRow dr = dt.NewRow();
-                dr["Link"] = aryFeedList[i];
-                if (!string.IsNullOrEmpty(aryFeedList[i + 1]))
-                    dr["Title"] = aryFeedList[i + 1];
+                dr["Link"] = Convert.ToString(aryFeedList[i]);
+                dr["Title"] = Convert.ToString(aryFeedList[i + 1]);
                 dt.Rows.Add(dr);
             }
             return dt;
