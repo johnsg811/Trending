@@ -65,6 +65,7 @@
             this.ClientSize = new System.Drawing.Size(539, 215);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnClose);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmHelp";

@@ -21,7 +21,7 @@ namespace Trending
 
         }
 
-        private void btnAddFeed_Click(object sender, EventArgs e)
+        private void btnAddFeed_Click(object sender, EventArgs e)           //
         {
             MainClass.RSSFeedManagerClass FMC = new MainClass.RSSFeedManagerClass();
             try

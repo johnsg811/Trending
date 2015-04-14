@@ -16,11 +16,5 @@ http://feeds.skynews.com/feeds/rss/home.xml
 The Latest News from the UK and Around the World | Sky News
 http://rss.nytimes.com/services/xml/rss/nyt/Europe.xml
 NYT > Europe
-http://feeds.reuters.com/reuters/businessNews
-Reuters: Business News
-http://feeds.reuters.com/reuters/USVideoPolitics
-Reuters Video: Politics
-http://feeds.reuters.com/news/artsculture
-Reuters: Arts
-http://feeds.reuters.com/reuters/companyNews
-Reuters: Company News
+http://feeds.bbci.co.uk/news/rss.xml
+BBC News - Home

@@ -52,7 +52,6 @@ namespace Trending
             this.toolStripNavigate = new System.Windows.Forms.ToolStrip();
             this.btnBack = new System.Windows.Forms.ToolStripButton();
             this.btnForward = new System.Windows.Forms.ToolStripButton();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.tmrTrackHistory = new System.Windows.Forms.Timer(this.components);
             this.tsMenu = new System.Windows.Forms.ToolStrip();
             this.tsAddFeed = new System.Windows.Forms.ToolStripDropDownButton();
@@ -161,7 +160,7 @@ namespace Trending
             this.txtWebURL.Name = "txtWebURL";
             this.txtWebURL.Size = new System.Drawing.Size(200, 20);
             this.txtWebURL.TabIndex = 2;
-            this.txtWebURL.Text = "example: www.johnsg.net";
+            this.txtWebURL.Text = "http://www.amazon.co.uk/";
             this.txtWebURL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWebURL_KeyPress);
             // 
             // groupBox1
@@ -296,14 +295,12 @@ namespace Trending
             this.NetBrowser.Name = "NetBrowser";
             this.NetBrowser.Size = new System.Drawing.Size(986, 390);
             this.NetBrowser.TabIndex = 1;
-            this.NetBrowser.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.NetBrowser_ProgressChanged);
             // 
             // toolStripNavigate
             // 
             this.toolStripNavigate.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnBack,
-            this.btnForward,
-            this.toolStripProgressBar1});
+            this.btnForward});
             this.toolStripNavigate.Location = new System.Drawing.Point(0, 0);
             this.toolStripNavigate.Name = "toolStripNavigate";
             this.toolStripNavigate.Size = new System.Drawing.Size(986, 25);
@@ -329,12 +326,6 @@ namespace Trending
             this.btnForward.Size = new System.Drawing.Size(23, 22);
             this.btnForward.Text = "Forward";
             this.btnForward.Click += new System.EventHandler(this.btnForward_Click);
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 22);
-            this.toolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             // 
             // tmrTrackHistory
             // 
@@ -470,7 +461,6 @@ namespace Trending
         private System.Windows.Forms.ToolStrip tsMenu;
         private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ToolStripButton tsRefresh;
         private System.Windows.Forms.GroupBox groupBox1;

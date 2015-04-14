@@ -33,10 +33,14 @@ namespace Trending.MainClass
         public DataTable GetFeedListAsDT()
         {
             string[] aryFeedList = GetRSSFeedList();
+            //Create data table
             DataTable dt = new DataTable();
+            //Define the column of data table
             dt.Columns.Add("Title", typeof(string));
             dt.Columns.Add("Link", typeof(string));
+            //check array list is blank or not. if balnk then only data table structure is return.
             if (aryFeedList == null) return dt;
+            //read array list and insert the data in both the coulmns
             for (int i = 0; i < aryFeedList.Length; i += 2)
             {
                 DataRow dr = dt.NewRow();
@@ -52,7 +56,7 @@ namespace Trending.MainClass
             string[] arryRssFeed=null;
             int NumLines = 0;
             TextReader TR = new StreamReader(TextFeedFilePath);
-            string NextLine = TR.ReadLine();
+            string NextLine = TR.ReadLine(); // Read data from text feed file
             while (NextLine != null)
             {
                 NumLines++;

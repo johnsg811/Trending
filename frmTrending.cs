@@ -26,13 +26,13 @@ namespace Trending
             InitializeComponent();
             tmrTrackHistory.Enabled = true;
             LoadEvent = true;
-            RFMC = new MainClass.RSSFeedManagerClass();
+            RFMC = new MainClass.RSSFeedManagerClass(); // Create instance of RSSFeedManagerClass
                    
-            dataGridView1.DataSource = RFMC.GetFeedListAsDT();
+            dataGridView1.DataSource = RFMC.GetFeedListAsDT();// Datasource bind with data table
             DataGridViewColumn column = dataGridView1.Columns[0];
             column.Width = 350;
             dataGridView1.Columns[1].Visible = false;
-            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Purple;
+            this.dataGridView1.RowsDefaultCellStyle.BackColor = Color.Purple;  
             this.dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.Black;
 
         }
@@ -158,60 +158,19 @@ namespace Trending
             {
                 btnBack.Enabled = false;
             }
-        }
+        }    
 
-        private void RSSList_Navigating(object sender, WebBrowserNavigatingEventArgs e)
-        {
-            if (!LoadEvent)
-            {
-                e.Cancel = true;
-                txtURL.Text = e.Url.ToString();
-                // btnFetchRSS_Click(this, new EventArgs());
-            }
-            else
-            {
-                LoadEvent = false;
-            }
-        }
-
-       
-
-        private void dataGridView1_CellMouseUp(object sender, EventArgs e)
-        {
-
-        }
-
-
-
+    
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowIndex = e.RowIndex;
+            int rowIndex = e.RowIndex; //return index or row number of data grid view
             DataGridViewRow row = dataGridView1.Rows[rowIndex];
             txtURL.Text = row.Cells[1].Value.ToString();
             RSSFeed(true);
             //RSSBrowser.Navigate(row.Cells[1].Value.ToString());
         }
 
-        private void NetBrowser_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
-        {
-           
-                //if ((int)e.CurrentProgress > 0)
-                //{
-                //    toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
-                //    if (toolStripProgressBar1.Maximum == (int)e.MaximumProgress)
-                //        toolStripProgressBar1.Value = 0;
-                //    toolStripProgressBar1.Value = (int)e.CurrentProgress;
-            //    //}
-            //if ((int)e.CurrentProgress > 0)
-            //{
-            //    if (e.CurrentProgress < e.MaximumProgress)
-            //        toolStripProgressBar1.Value = (int)e.CurrentProgress;
-            //    else toolStripProgressBar1.Value = toolStripProgressBar1.Minimum;
-            //}
-           
 
-
-        }
         #region Form load
         private void frmTrending_Load(object sender, EventArgs e)
         {
@@ -235,7 +194,10 @@ namespace Trending
         //Refresh : after adding new RSS feed
         private void tsRefresh_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = RFMC.GetFeedListAsDT();
+            dataGridView1.DataSource = RFMC.GetFeedListAsDT(); // Datasource bind with data table
+            if (!RSSButton)
+                NetBrowser.Navigate("https://www.google.ie/");
+
         }
 
 #region Reccomanded Web site
@@ -324,13 +286,6 @@ namespace Trending
 
 
         }
-
-   
-
-
-
-
-
     }
 }
 
