@@ -53,7 +53,7 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(499, 126);
+            this.textBox1.Size = new System.Drawing.Size(513, 126);
             this.textBox1.TabIndex = 12;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
@@ -62,7 +62,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(539, 215);
+            this.ClientSize = new System.Drawing.Size(556, 228);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnClose);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
