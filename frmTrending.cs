@@ -56,7 +56,7 @@ namespace Trending
                
 
                 StringBuilder sb = new StringBuilder();
-                int x = 115, y = 150;
+                int x = 105, y = 135;
 
                 foreach (XmlNode RSSNode in RSSNodeList)
                 {
